@@ -107,20 +107,21 @@ echo "       $CYAN█░█ █▀█ █▀▄ ▄▀█ ▀█▀ �
 echo "       $WHITE█▄█ █▀▀ █▄▀ █▀█ ░█░ █ █░▀█ █▄█   ▄█ █▄▄ █▀▄ █ █▀▀ ░█░"
 echo ""
 echo ""
+cd ..
+rm -rf smsnuke
 echo -e "      \e[92m[\e[93m~\e[92m]\e[36m Requesting Update From Source...\e[93m"
+git clone https://github.com/shauryamishra444/smsnuke 
 sleep 2
 echo ""
 echo -e "      \e[92m[\e[93m~\e[92m]\e[0m Request Attempt Successful..\e[93m"
 sleep 1
 echo ""
+cd smsnuke
+chmod +x anonymousbomber.sh
+
 echo -e "      \e[92m[\e[93m~\e[92m]\e[36m Updating Now...\e[93m"
 sleep 2
 echo ""
-cd ..
-rm -rf anonymousbomber.sh
-git clone https://github.com/shauryamishra444/smsnuke > /dev/null 2>&1
-cd smsnuke
-chmod +x smsnuke.sh
 clear
 echo ""
 echo "       $GREEN █▀ █▀▀ █▀█ █ █▀█ ▀█▀   █░█ █▀█ █▀▄ ▄▀█ ▀█▀ █▀▀ █▀▄"
@@ -130,7 +131,7 @@ sleep 3
 echo ""
 echo -e "        \e[92m[\e[91m~\e[92m]\e[91m Restarting XLR8 !\e[93m"
 sleep 2
-bash xlr8.sh
+bash server.sh
 }
 
 
