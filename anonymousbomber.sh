@@ -46,7 +46,7 @@ echo ""
 }
 
 #    Check Internet
-wget -q --spider https://github.com/anubhavanonymous
+wget -q --spider https://github.com/shauryamishra444
 
 if [ $? -eq 0 ]; then
     just
@@ -116,10 +116,10 @@ echo -e "      \e[92m[\e[93m~\e[92m]\e[36m Updating Now...\e[93m"
 sleep 2
 echo ""
 cd ..
-rm -rf XLR8_BOMBER
-git clone https://github.com/anubhavanonymous/XLR8_BOMBER > /dev/null 2>&1
-cd XLR8_BOMBER
-chmod +x xlr8.sh
+rm -rf anonymousbomber.sh
+git clone https://github.com/shauryamishra444/smsnuke > /dev/null 2>&1
+cd smsnuke
+chmod +x smsnuke.sh
 clear
 echo ""
 echo "       $GREEN █▀ █▀▀ █▀█ █ █▀█ ▀█▀   █░█ █▀█ █▀▄ ▄▀█ ▀█▀ █▀▀ █▀▄"
@@ -172,10 +172,14 @@ echo -e '''
          \e[1;91m║\e[1;97m██████\e[1;91m║\e[1;97m█████████\e[1;91m║
 ''' | pv -qL 300
 sleep 1.2
-echo -e "                                  This is\e[1;0m Shaurya Mishra" | pv -qL 150
-echo "                                    aka anonymousMishra !" | pv -qL 150
+echo "                               This is\e[1;0m Shaurya Mishra"
+echo "" 
+echo "$MAGENTA                        Introducing SMSNUKE, A tool made for bombing short messages by using some of online website's SMS APIs"
+echo "$MAGENTA                        Uploaded on HEROKU's XLR8 cloud server for 24x7 service"
+echo "$RED              NOTE:- Some times the server is down due to over load USE IT WHENEVER NECESSARY ONLY."
+echo "                                     This tool was made only for EDUCATION PURPOSE !! "
 echo ""
-sleep 7
+sleep 15
 menux
 }
 
