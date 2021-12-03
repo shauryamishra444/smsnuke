@@ -26,6 +26,7 @@ echo "                      $GREEN 3. With Great Powers comes Great Responsibili
 echo ""
 echo ""
 echo ""
+sleep 3
 }
 
 
@@ -300,6 +301,7 @@ printf "\e[1;33m⚡ This tool is only for Educational Purposes !!\e[0m\n"
 echo "------------------------------"
 echo ""
 sleep 1
+printf "\e[1;92m[\e[0m 0\e[1;92m ]\e[0m>>>\e[1;33m Bomb Records \e[0m\n"
 printf "\e[1;92m[\e[0m 1\e[1;92m ]\e[0m>>>\e[1;33m MASS BOMBING \e[0m\n"
 printf "\e[1;92m[\e[0m 2\e[1;92m ]\e[0m>>>\e[1;33m UPDATE \e[0m\n"
 printf "\e[1;92m[\e[0m 3\e[1;92m ]\e[0m>>>\e[1;33m ABOUT \e[0m\n"
