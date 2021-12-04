@@ -129,7 +129,7 @@ echo "       $WHITE ▄█ █▄▄ █▀▄ █ █▀▀ ░█░
 echo ""
 sleep 3
 echo ""
-echo -e "        \e[92m[\e[91m~\e[92m]\e[91m Restarting XLR8 !\e[93m"
+echo -e "        \e[92m[\e[91m~\e[92m]\e[91m Restarting BOMBER !!\e[93m"
 sleep 2
 bash server.sh
 }
@@ -156,7 +156,7 @@ echo -e '''
          \e[1;91m      ╔═══════════╗
          \e[1;91m    ╔═╝\e[1;97m███████████\e[1;91m╚═╗
          \e[1;91m   ╔╝\e[1;97m███████████████\e[1;91m╚╗
-         \e[1;91m   ║\e[1;97m█████\e[1;92m4NU8H4V\e[1;97m█████\e[1;91m║
+         \e[1;91m   ║\e[1;97m█████\e[1;92mSHAURYA\e[1;97m█████\e[1;91m║
          \e[1;91m   ║\e[1;97m█████████████████\e[1;91m║\e[1;91m
          \e[1;91m   ║\e[1;97m█████████████████\e[1;91m║\e[1;91m
          \e[1;91m   ║\e[1;97m█\e[1;91m╔\e[1;97m█████████████\e[1;91m╗\e[1;97m█\e[1;91m║\e[1;91m
@@ -176,10 +176,10 @@ echo -e '''
 sleep 1.2
 echo "                               This is\e[1;0m Shaurya Mishra"
 echo "" 
-echo "$MAGENTA                        Introducing SMSNUKE, A tool made for bombing short messages by using some of online website's SMS APIs"
-echo "$MAGENTA                        Uploaded on HEROKU's XLR8 cloud server for 24x7 service"
-echo "$RED              NOTE:- Some times the server is down due to over load USE IT WHENEVER NECESSARY ONLY."
-echo "                                     This tool was made only for EDUCATION PURPOSE !! "
+echo "$CYANIntroducing SMSNUKE, A tool made for bombing short messages by using some of online website's SMS APIs"
+echo "$CYANUploaded on HEROKU's XLR8 cloud server for 24x7 service"
+echo "$REDNOTE:- Some times the server is down due to over load USE IT WHENEVER NECESSARY ONLY."
+echo "$CYANThis tool was made only for EDUCATION PURPOSE !! "
 echo ""
 sleep 15
 menux
