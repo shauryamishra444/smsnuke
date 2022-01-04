@@ -7,8 +7,8 @@ try:
     print(Fore.RED + 'Colorama' + Fore.WHITE + ' [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
 except Exception as e:
     print(e)
-    print(Fore.RED + "'Colorama' was not found!")
-    print(Fore.GREEN + "Installing colorama")
+    print("'Colorama' was not found!")
+    print("Installing colorama")
     os.system('pip install colorama')
 
 try:
