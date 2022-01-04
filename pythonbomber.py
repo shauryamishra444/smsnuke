@@ -1,9 +1,4 @@
-try:
-    import os
-    print(Fore.RED + 'os' + Fore.WHITE + '       [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
-except Exception as e:
-    print(e)
-    print(Fore.RED + "'os' was not found!")
+import os
 
 try:
     from colorama import *
@@ -13,6 +8,16 @@ try:
 except Exception as e:
     print(e)
     print(Fore.RED + "'Colorama' was not found!")
+    print(Fore.GREEN + "Installing colorama")
+    os.system('pip install colorama')
+
+try:
+    import os
+    print(Fore.RED + 'os' + Fore.WHITE + '       [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
+except Exception as e:
+    print(e)
+    print(Fore.RED + "'os' was not found!")
+
 
 try:
     import time
@@ -33,9 +38,36 @@ except Exception as e:
     print(e)
 
 input('Press enter to continue')
+os.system("clear")
+
+
+print("""
+                      :::!~!!!!!:.
+                  .xUHWH!! !!?M88WHX:.
+                .X*#M@$!!  !X!M$$$$$$WWx:.
+               :!!!!!!?H! :!$!$$$$$$$$$$8X:
+              !!~  ~:~!! :~!$!#$$$$$$$$$$8X:
+             :!~::!H!<   ~.U$X!?R$$$$$$$$MM!
+             ~!~!!!!~~ .:XW$$$U!!?$$$$$$RMM!
+               !:~~~ .:!M"T#$$$$WX??#MRRMMM!
+               ~?WuxiW*`   `"#$$$$8!!!!??!!!
+             :X- M$$$$       `"T#$T~!8$WUXU~
+            :%`  ~#$$$m:        ~!~ ?$$$$$$
+          :!`.-   ~T$$$$8xx.  .xWW- ~""##*"
+.....   -~~:<` !    ~?T#$$@@W@*?$$      /`
+W$@@M!!! .!~~ !!     .:XUW$W!~ `"~:    :
+#"~~`.:x%`!!  !H:   !WM$$$$Ti.: .!WUn+!`
+:::~:!!`:X~ .: ?H.!u "$$$B$$$!W:U!T$$M~
+.~~   :X@!.-~   ?@WTWo("*$$$W$TH$! `         
+Wi.~!X$?!-~    : ?$$$B$Wu("**$RM!            
+$R@i.~~ !     :   ~$$$$$B$$en:``              
+?MXT@Wx.~    :     ~"##*$$$$M~                
+""")
+
+
 def startup_time():
     Time=datetime.datetime.now().strftime('%H:%M:%S')
-    os.system('clear')
+    os.system('')
     print(' ')
     print(' ')
     print(Fore.WHITE + '[' + '\033[1;32m~' + Fore.WHITE + ']' + Fore.GREEN + 'Tool Started at ' + Fore.CYAN + Time)
